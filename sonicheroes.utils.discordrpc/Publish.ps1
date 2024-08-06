@@ -163,30 +163,30 @@ param (
 
     ## => User Config <= ## 
     $ProjectPath = "SonicHeroes.Utils.DiscordRPC.csproj",
-    $PackageName = "SonicHeroes.Utils.DiscordRPC",
+    $PackageName = "SonicHeroes.discordrichpresence",
     $PublishOutputDir = "Publish/ToUpload",
 
     ## => User: Delta Config
     # Pick one and configure settings below.
-    $MetadataFileName = "Sewer56.Update.ReleaseMetadata.json",
+    $MetadataFileName = "Auxy6858.Update.ReleaseMetadata.json",
     $UseGitHubDelta = $False, # GitHub Releases
     $UseGameBananaDelta = $False,
     $UseNuGetDelta = $False,
 
-    $GitHubUserName = "", # Name of the GitHub user where the mod is contained
-    $GitHubRepoName = "", # Name of the GitHub repo where the mod is contained
+    $GitHubUserName = "Auxy6858", # Name of the GitHub user where the mod is contained
+    $GitHubRepoName = "SonicHeroes.Utils.DiscordRPC.ReloadedII", # Name of the GitHub repo where the mod is contained
     $GitHubFallbackPattern = "", # For migrating from legacy build script.
     $GitHubInheritVersionFromTag = $True, # Uses version determined from release tag as opposed to metadata file in latest release.
 
-    $GameBananaItemId = 333681, # From mod page URL.
+    $GameBananaItemId = 533426, # From mod page URL.
 
-    $NuGetPackageId = "SonicHeroes.Utils.DiscordRPC",
-    $NuGetFeedUrl = "http://packages.sewer56.moe:5000/v3/index.json",
+    $NuGetPackageId = "",
+    $NuGetFeedUrl = "",
     $NuGetAllowUnlisted = $False,
 
     ## => User: Publish Config
     $PublishGeneric    = $True,
-    $PublishNuGet      = $True,
+    $PublishNuGet      = $False,
     $PublishGameBanana = $True
 )
 
