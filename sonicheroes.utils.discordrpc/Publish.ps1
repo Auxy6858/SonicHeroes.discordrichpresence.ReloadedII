@@ -168,13 +168,13 @@ param (
 
     ## => User: Delta Config
     # Pick one and configure settings below.
-    $MetadataFileName = "Auxy6858.Update.ReleaseMetadata.json",
+    $MetadataFileName = "Sewer56.Update.ReleaseMetadata.json",
     $UseGitHubDelta = $False, # GitHub Releases
     $UseGameBananaDelta = $False,
     $UseNuGetDelta = $False,
 
-    $GitHubUserName = "Auxy6858", # Name of the GitHub user where the mod is contained
-    $GitHubRepoName = "SonicHeroes.Utils.DiscordRPC.ReloadedII", # Name of the GitHub repo where the mod is contained
+    $GitHubUserName = "", # Name of the GitHub user where the mod is contained
+    $GitHubRepoName = "", # Name of the GitHub repo where the mod is contained
     $GitHubFallbackPattern = "", # For migrating from legacy build script.
     $GitHubInheritVersionFromTag = $True, # Uses version determined from release tag as opposed to metadata file in latest release.
 
