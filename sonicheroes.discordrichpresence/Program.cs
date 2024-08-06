@@ -2,6 +2,7 @@
 using Reloaded.Hooks.ReloadedII.Interfaces;
 using Reloaded.Mod.Interfaces;
 using Reloaded.Mod.Interfaces.Internal;
+using SonicHeroes.discordrichpresence;
 
 namespace SonicHeroes.Utils.DiscordRPC;
 

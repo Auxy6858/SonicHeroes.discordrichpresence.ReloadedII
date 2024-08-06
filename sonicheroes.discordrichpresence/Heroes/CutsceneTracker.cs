@@ -1,7 +1,7 @@
 ﻿using Heroes.SDK.Classes.NativeClasses;
 using Reloaded.Hooks.Definitions;
 
-namespace SonicHeroes.Utils.DiscordRPC.Heroes;
+namespace SonicHeroes.discordrichpresence.Heroes;
 
 public unsafe class CutsceneTracker
 {

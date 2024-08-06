@@ -4,7 +4,7 @@
 	<br/> <br/>
 	<strong>Rich Presence? For an emulated game?<br/></strong>
     <p>Wait, wait, wait!! This isn't Shadow The Hedgehog!</p>
-<b>Id: sonicheroes.utils.discordrpc</b>
+<b>Id: sonicheroes.discordrichpresence</b>
 </div>
 
 # About This Project

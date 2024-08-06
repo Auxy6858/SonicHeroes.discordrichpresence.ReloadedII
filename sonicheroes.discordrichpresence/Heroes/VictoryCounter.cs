@@ -4,7 +4,7 @@ using Heroes.SDK.Definitions.Enums.Custom;
 using Heroes.SDK.Definitions.Structures.State;
 using Reloaded.Hooks.Definitions;
 
-namespace SonicHeroes.Utils.DiscordRPC.Heroes;
+namespace SonicHeroes.discordrichpresence.Heroes;
 
 public unsafe class VictoryCounter
 {

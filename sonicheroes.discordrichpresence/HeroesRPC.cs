@@ -3,10 +3,11 @@ using Heroes.SDK.API;
 using Heroes.SDK.Definitions.Enums;
 using Heroes.SDK.Definitions.Enums.Custom;
 using Heroes.SDK.Definitions.Structures.State;
-using SonicHeroes.Utils.DiscordRPC.Heroes;
-using SonicHeroes.Utils.DiscordRPC.Heroes.Utilities;
+using SonicHeroes.discordrichpresence;
+using SonicHeroes.discordrichpresence.Heroes;
+using SonicHeroes.discordrichpresence.Heroes.Utilities;
 
-namespace SonicHeroes.Utils.DiscordRPC;
+namespace SonicHeroes.discordrichpresence;
 
 public class HeroesRPC : IDisposable
 {

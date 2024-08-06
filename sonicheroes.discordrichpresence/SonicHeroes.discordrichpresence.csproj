@@ -5,8 +5,8 @@
     <LangVersion>10.0</LangVersion>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
-    <AssemblyName>SonicHeroes.Utils.DiscordRPC</AssemblyName>
-    <RootNamespace>SonicHeroes.Utils.DiscordRPC</RootNamespace>
+    <AssemblyName>SonicHeroes.discordrichpresence</AssemblyName>
+    <RootNamespace>SonicHeroes.discordrichpresence</RootNamespace>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     
     <Nullable>enable</Nullable>
@@ -19,7 +19,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ReloadedLinkRoots Include="SonicHeroes.Utils.DiscordRPC" />
+    <ReloadedLinkRoots Include="SonicHeroes.discordrichpresence" />
     <ReloadedLinkAssemblies Include="Heroes.SDK" />
     <ReloadedLinkAssemblies Include="Reloaded.Memory" />
   </ItemGroup>

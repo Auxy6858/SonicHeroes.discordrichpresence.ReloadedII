@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Heroes.SDK.Definitions.Enums;
 
-namespace SonicHeroes.Utils.DiscordRPC.Heroes.Utilities;
+namespace SonicHeroes.discordrichpresence.Heroes.Utilities;
 
 public static class ImageNameDictionary
 {
