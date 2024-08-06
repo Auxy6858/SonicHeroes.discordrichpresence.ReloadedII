@@ -1,5 +1,5 @@
 ./sonicheroes.utils.discordrpc/Publish.ps1 @args `
 -UseScriptDirectory false `
--ProjectPath "sonicheroes.utils.discordrpc/sonicheroes.utils.discordrpc.csproj" `
+-ProjectPath "sonicheroes.discordrichpresence/sonicheroes.discordrichpresence.csproj" `
 -PackageName "sonicheroes.discordrichpresence" `
 -ReadmePath README-MOD.md
