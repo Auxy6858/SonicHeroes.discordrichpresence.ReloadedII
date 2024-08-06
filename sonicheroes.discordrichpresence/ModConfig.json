@@ -4,7 +4,7 @@
   "ModAuthor": "Auxy, Sewer56",
   "ModVersion": "1.1",
   "ModDescription": "Adds support for Discord Rich Presence to the PC version of Sonic Heroes. (Fork of Sewer56\u0027s mod)",
-  "ModDll": "SonicHeroes.Utils.DiscordRPC.dll",
+  "ModDll": "SonicHeroes.discordrichpresence.dll",
   "ModIcon": "Preview.png",
   "ModR2RManagedDll32": "",
   "ModR2RManagedDll64": "",
@@ -25,7 +25,7 @@
             "UseReleaseTag": true,
             "AssetFileName": "reloaded.sharedlib.hooks.zip"
           },
-          "ReleaseMetadataName": "Sewer56.Update.ReleaseMetadata.json"
+          "ReleaseMetadataName": "Auxy6858.Update.ReleaseMetadata.json"
         }
       }
     },
