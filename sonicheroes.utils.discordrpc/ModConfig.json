@@ -1,41 +1,37 @@
 {
-  "ModId": "sonicheroes.utils.discordrpc",
-  "ModName": "Sonic Heroes: Discord Rich Presence",
-  "ModAuthor": "Sewer56",
-  "ModVersion": "2.0.5",
-  "ModDescription": "Adds support for Discord Rich Presence to the PC version of Sonic Heroes.",
+  "ModId": "sonicheroes.discordrichpresence",
+  "ModName": "Sonic Heroes: Discord RPC",
+  "ModAuthor": "Auxy, Sewer56",
+  "ModVersion": "1.1",
+  "ModDescription": "Adds support for Discord Rich Presence to the PC version of Sonic Heroes. (Fork of Sewer56\u0027s mod)",
   "ModDll": "SonicHeroes.Utils.DiscordRPC.dll",
   "ModIcon": "Preview.png",
   "ModR2RManagedDll32": "",
   "ModR2RManagedDll64": "",
   "ModNativeDll32": "",
   "ModNativeDll64": "",
+  "Tags": [],
+  "CanUnload": true,
+  "HasExports": false,
   "IsLibrary": false,
-  "ReleaseMetadataFileName": "Sewer56.Update.ReleaseMetadata.json",
+  "ReleaseMetadataFileName": "",
   "PluginData": {
     "GitHubDependencies": {
       "IdToConfigMap": {
         "reloaded.sharedlib.hooks": {
           "Config": {
-            "UserName": "Reloaded.SharedLib.Hooks.ReloadedII",
-            "RepositoryName": "Sewer56",
+            "UserName": "Sewer56",
+            "RepositoryName": "Reloaded.SharedLib.Hooks.ReloadedII",
             "UseReleaseTag": true,
             "AssetFileName": "reloaded.sharedlib.hooks.zip"
-          }
+          },
+          "ReleaseMetadataName": "Sewer56.Update.ReleaseMetadata.json"
         }
       }
     },
-    "GitHubRelease": {
-      "UserName": "Sewer56",
-      "RepositoryName": "SonicHeroes.Utils.DiscordRPC.ReloadedII",
-      "UseReleaseTag": true,
-      "AssetFileName": "Mod.zip"
-    },
-    "NuGet": {
-      "AllowUpdateFromAnyRepository": false,
-      "DefaultRepositoryUrls": [
-        "http://packages.sewer56.moe:5000/v3/index.json"
-      ]
+    "GameBanana": {
+      "ItemType": "Mod",
+      "ItemId": 533426
     }
   },
   "IsUniversalMod": false,
@@ -46,5 +42,5 @@
   "SupportedAppId": [
     "tsonic_win.exe"
   ],
-  "ProjectUrl": "https://github.com/Sewer56/SonicHeroes.Utils.DiscordRPC.ReloadedII"
+  "ProjectUrl": "https://github.com/Auxy6858/SonicHeroes.Utils.DiscordRPC.ReloadedII/"
 }

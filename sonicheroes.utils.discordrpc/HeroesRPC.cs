@@ -24,7 +24,11 @@ public class HeroesRPC : IDisposable
         _cutsceneTracker = new CutsceneTracker();
         _victoryCounter  = new VictoryCounter();
 
-        _discordRpc = new DiscordRpcClient("494266376899395605"); // Not like you could get this from decompiling anyway. Obfuscation? That sucks.
+        _discordRpc = new DiscordRpcClient("1270154384709390429"); // Not like you could get this from decompiling anyway. Obfuscation? That sucks.
+        /* Unsure of why you'd want to obfuscate this anyways.
+         * From what I'm aware of, nobody can do anything with a discord app ID.
+         * - Auxy
+         */
         _discordRpc.Initialize();
         _timer = new Timer(OnTick, null, 0, 5000);
     }
@@ -62,9 +66,8 @@ public class HeroesRPC : IDisposable
             richPresence.Timestamps = timeStamps;
         }
 
-        // Get Image
-        if (!State.IsInMainMenu() && ImageNameDictionary.Dictionary.TryGetValue(State.CurrentStage, out string? stageAssetName))
-            richPresence.Assets.LargeImageKey = stageAssetName;
+        // Made the image be the sonic heroes logo at all times, in my opinion it looks better and more professional 
+        richPresence.Assets.LargeImageKey = "sonicheroes";
 
         // Send to Discord
         _discordRpc.SetPresence(richPresence);
@@ -82,11 +85,11 @@ public class HeroesRPC : IDisposable
         else if (State.IsWatchingIngameEvent())
             currentDetails = $"Watching Cutscene in {State.GetStageName()}";
         else if (State.IsInMainMenu())
-            currentDetails = $"Navigating the Menus";
+            currentDetails = $"Main Menu";
         else if (State.IsMultiplayerMode())
             currentDetails = $"Versus Mode: {State.GetStageName()}";
         else
-            currentDetails = $"Playing in {State.GetStageName()}";
+            currentDetails = $"{State.GetStageName()}"; // Changed this to just the stage name, gets the point across and looks more sleek imo
 
         return currentDetails;
     }
