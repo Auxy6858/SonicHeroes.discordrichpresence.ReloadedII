@@ -168,13 +168,13 @@ param (
 
     ## => User: Delta Config
     # Pick one and configure settings below.
-    $MetadataFileName = "Sewer56.Update.ReleaseMetadata.json",
+    $MetadataFileName = "Auxy6858.Update.ReleaseMetadata.json",
     $UseGitHubDelta = $False, # GitHub Releases
     $UseGameBananaDelta = $False,
     $UseNuGetDelta = $False,
 
-    $GitHubUserName = "", # Name of the GitHub user where the mod is contained
-    $GitHubRepoName = "", # Name of the GitHub repo where the mod is contained
+    $GitHubUserName = "auxy6858", # Name of the GitHub user where the mod is contained
+    $GitHubRepoName = "SonicHeroes.Utils.DiscordRPC.ReloadedII", # Name of the GitHub repo where the mod is contained
     $GitHubFallbackPattern = "", # For migrating from legacy build script.
     $GitHubInheritVersionFromTag = $True, # Uses version determined from release tag as opposed to metadata file in latest release.
 
@@ -203,7 +203,7 @@ $PublishGameBananaDirectory = "$PublishOutputDir/GameBanana"  # Publish files fo
 $reloadedToolsPath = "./Publish/Tools/Reloaded-Tools"    # Used to check if tools are installed.
 $updateToolsPath   = "./Publish/Tools/Update-Tools"      # Used to check if update tools are installed.
 $reloadedToolPath = "$reloadedToolsPath/Reloaded.Publisher.exe"  # Path to Reloaded publishing tool.
-$updateToolPath   = "$updateToolsPath/Sewer56.Update.Tool.dll" # Path to Update tool.
+$updateToolPath   = "$updateToolsPath/Auxy6858.Update.Tool.dll" # Path to Update tool.
 $changelogFullPath = $null
 $readmeFullPath = $null
 if ($ChangelogPath) { $changelogFullPath = [System.IO.Path]::GetFullPath($ChangelogPath) }
