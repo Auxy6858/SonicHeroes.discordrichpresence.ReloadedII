@@ -202,7 +202,7 @@ $PublishGameBananaDirectory = "$PublishOutputDir/GameBanana"  # Publish files fo
 # Tools
 $reloadedToolsPath = "./Publish/Tools/Reloaded-Tools"    # Used to check if tools are installed.
 $updateToolsPath   = "./Publish/Tools/Update-Tools"      # Used to check if update tools are installed.
-$reloadedToolPath = "$reloadedToolsPath/ReloadedPublisher"  # Path to Reloaded publishing tool.
+$reloadedToolPath = "$reloadedToolsPath/ReloadedPublisher.elf"  # Path to Reloaded publishing tool.
 $updateToolPath   = "$updateToolsPath/Sewer56.Update.Tool.dll" # Path to Update tool.
 $changelogFullPath = $null
 $readmeFullPath = $null
