@@ -344,7 +344,7 @@ function Publish-Common {
 	$arguments = "$(Get-Common-Publish-Args -AllowDeltas $AllowDeltas) --outputfolder `"$Directory`" --publishtarget $PublishTarget"
 	$command = "$reloadedToolPath $arguments"
 	Write-Host "$command`r`n`r`n"
- 	Invoke-Expression "sudo apt install wslu"
+ 	Invoke-Expression "sudo apt update &&  sudo apt-get install xdg-utils"
 	Invoke-Expression $command
 }
 
