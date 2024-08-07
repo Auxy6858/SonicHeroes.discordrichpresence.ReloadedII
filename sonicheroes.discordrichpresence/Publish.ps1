@@ -202,7 +202,7 @@ $PublishGameBananaDirectory = "$PublishOutputDir/GameBanana"  # Publish files fo
 # Tools
 $reloadedToolsPath = "./Publish/Tools/Reloaded-Tools"    # Used to check if tools are installed.
 $updateToolsPath   = "./Publish/Tools/Update-Tools"      # Used to check if update tools are installed.
-$reloadedToolPath = "$reloadedToolsPath/Reloaded.Publisher.exe"  # Path to Reloaded publishing tool.
+$reloadedToolPath = "$reloadedToolsPath/Reloaded.Publisher.dll"  # Path to Reloaded publishing tool.
 $updateToolPath   = "$updateToolsPath/Sewer56.Update.Tool.dll" # Path to Update tool.
 $changelogFullPath = $null
 $readmeFullPath = $null
@@ -239,7 +239,7 @@ function Get-Tools {
     $ProgressPreference = 'SilentlyContinue'
     if (-not(Test-Path -Path $reloadedToolsPath -PathType Any)) {
         Write-Host "Downloading Reloaded Tools"
-        Invoke-WebRequest -Uri "https://github.com/Reloaded-Project/Reloaded-II/releases/latest/download/Tools.zip" -OutFile "$TempDirectory/Tools.zip"
+        Invoke-WebRequest -Uri "https://github.com/Auxy6858/Reloaded-II/releases/latest/download/Tools.zip" -OutFile "$TempDirectory/Tools.zip"
         Expand-Archive -LiteralPath "$TempDirectory/Tools.zip" -DestinationPath $reloadedToolsPath
 
         # Remove Items
