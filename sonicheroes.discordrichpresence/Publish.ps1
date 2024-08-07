@@ -344,7 +344,8 @@ function Publish-Common {
 	$arguments = "$(Get-Common-Publish-Args -AllowDeltas $AllowDeltas) --outputfolder `"$Directory`" --publishtarget $PublishTarget"
 	$command = "$reloadedToolPath $arguments"
 	Write-Host "$command`r`n`r`n"
-	Invoke-Expression "./Publish/Tools/Reloaded-Tools/ReloadedPublisher.elf $arguments"
+ 	Invoke-Expression "sudo apt install wslu"
+	Invoke-Expression $command
 }
 
 function Publish-GameBanana {
