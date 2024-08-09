@@ -202,8 +202,8 @@ $PublishGameBananaDirectory = "$PublishOutputDir/GameBanana"  # Publish files fo
 # Tools
 $reloadedToolsPath = "./Publish/Tools/Reloaded-Tools"    # Used to check if tools are installed.
 $updateToolsPath   = "./Publish/Tools/Update-Tools"      # Used to check if update tools are installed.
-$reloadedToolPath = "$reloadedToolsPath/Reloaded.Publisher.dll"  # Path to Reloaded publishing tool.
-$updateToolPath   = "$updateToolsPath/Sewer56.Update.Tool.dll" # Path to Update tool.
+$reloadedToolPath = "$reloadedToolsPath/Reloaded.Publisher"  # Path to Reloaded publishing tool.
+$updateToolPath   = "$updateToolsPath/Sewer56.Update.Tool" # Path to Update tool.
 $changelogFullPath = $null
 $readmeFullPath = $null
 if ($ChangelogPath) { $changelogFullPath = [System.IO.Path]::GetFullPath($ChangelogPath) }
@@ -248,7 +248,7 @@ function Get-Tools {
 
     if ($MakeDelta -and -not(Test-Path -Path $updateToolsPath -PathType Any)) {
         Write-Host "Downloading Update Library Tools"
-        Invoke-WebRequest -Uri "https://github.com/Sewer56/Update/releases/latest/download/Sewer56.Update.Tool.zip" -OutFile "$TempDirectory/Sewer56.Update.Tool.zip"
+        Invoke-WebRequest -Uri "https://github.com/Auxy6858/Update/releases/latest/download/Sewer56.Update.Tool.zip" -OutFile "$TempDirectory/Sewer56.Update.Tool.zip"
         Expand-Archive -LiteralPath "$TempDirectory/Sewer56.Update.Tool.zip" -DestinationPath $updateToolsPath
 
         # Remove Items
