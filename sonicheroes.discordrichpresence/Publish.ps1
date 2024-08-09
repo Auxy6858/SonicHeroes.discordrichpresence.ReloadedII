@@ -153,11 +153,11 @@
 [cmdletbinding()]
 param (
     $IsPrerelease=$False, 
-    $MakeDelta=$False, 
+    $MakeDelta=$True, 
     $ChangelogPath="",
     $ReadmePath="",
     $Build=$True,
-    $BuildR2R=$False,
+    $BuildR2R=$True,
     $RemoveExe=$True,
     $UseScriptDirectory=$True,
 
