@@ -169,12 +169,12 @@ param (
     ## => User: Delta Config
     # Pick one and configure settings below.
     $MetadataFileName = "Sewer56.Update.ReleaseMetadata.json",
-    $UseGitHubDelta = $False, # GitHub Releases
+    $UseGitHubDelta = $True, # GitHub Releases
     $UseGameBananaDelta = $False,
     $UseNuGetDelta = $False,
 
-    $GitHubUserName = "", # Name of the GitHub user where the mod is contained
-    $GitHubRepoName = "", # Name of the GitHub repo where the mod is contained
+    $GitHubUserName = "Auxy6858", # Name of the GitHub user where the mod is contained
+    $GitHubRepoName = "SonicHeroes.discordrichpresence.ReloadedII", # Name of the GitHub repo where the mod is contained
     $GitHubFallbackPattern = "", # For migrating from legacy build script.
     $GitHubInheritVersionFromTag = $True, # Uses version determined from release tag as opposed to metadata file in latest release.
 
@@ -202,8 +202,8 @@ $PublishGameBananaDirectory = "$PublishOutputDir/GameBanana"  # Publish files fo
 # Tools
 $reloadedToolsPath = "./Publish/Tools/Reloaded-Tools"    # Used to check if tools are installed.
 $updateToolsPath   = "./Publish/Tools/Update-Tools"      # Used to check if update tools are installed.
-$reloadedToolPath = "$reloadedToolsPath/Reloaded.Publisher"  # Path to Reloaded publishing tool.
-$updateToolPath   = "$updateToolsPath/Sewer56.Update.Tool" # Path to Update tool.
+$reloadedToolPath = "$reloadedToolsPath/ReloadedPublisher"  # Path to Reloaded publishing tool.
+$updateToolPath   = "$updateToolsPath/Sewer56.Update.Tool.dll" # Path to Update tool.
 $changelogFullPath = $null
 $readmeFullPath = $null
 if ($ChangelogPath) { $changelogFullPath = [System.IO.Path]::GetFullPath($ChangelogPath) }
@@ -344,6 +344,7 @@ function Publish-Common {
 	$arguments = "$(Get-Common-Publish-Args -AllowDeltas $AllowDeltas) --outputfolder `"$Directory`" --publishtarget $PublishTarget"
 	$command = "$reloadedToolPath $arguments"
 	Write-Host "$command`r`n`r`n"
+ 	Invoke-Expression "chmod +x $reloadedToolPath"
 	Invoke-Expression $command
 }
 
