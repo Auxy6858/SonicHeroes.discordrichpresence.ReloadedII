@@ -170,7 +170,7 @@ param (
     # Pick one and configure settings below.
     $MetadataFileName = "Sewer56.Update.ReleaseMetadata.json",
     $UseGitHubDelta = $True, # GitHub Releases
-    $UseGameBananaDelta = $False,
+    $UseGameBananaDelta = $True,
     $UseNuGetDelta = $False,
 
     $GitHubUserName = "Auxy6858", # Name of the GitHub user where the mod is contained
@@ -180,7 +180,7 @@ param (
 
     $GameBananaItemId = 533426, # From mod page URL.
 
-    $NuGetPackageId = "SonicHeroes.discordrichpresence",
+    $NuGetPackageId = "SonicHeroes.Utils.DiscordRPC",
     $NuGetFeedUrl = "http://packages.sewer56.moe:5000/v3/index.json",
     $NuGetAllowUnlisted = $False,
 
@@ -202,7 +202,7 @@ $PublishGameBananaDirectory = "$PublishOutputDir/GameBanana"  # Publish files fo
 # Tools
 $reloadedToolsPath = "./Publish/Tools/Reloaded-Tools"    # Used to check if tools are installed.
 $updateToolsPath   = "./Publish/Tools/Update-Tools"      # Used to check if update tools are installed.
-$reloadedToolPath = "$reloadedToolsPath/ReloadedPublisher.elf"  # Path to Reloaded publishing tool.
+$reloadedToolPath = "$reloadedToolsPath/Reloaded.Publisher.exe"  # Path to Reloaded publishing tool.
 $updateToolPath   = "$updateToolsPath/Sewer56.Update.Tool.dll" # Path to Update tool.
 $changelogFullPath = $null
 $readmeFullPath = $null
@@ -239,7 +239,7 @@ function Get-Tools {
     $ProgressPreference = 'SilentlyContinue'
     if (-not(Test-Path -Path $reloadedToolsPath -PathType Any)) {
         Write-Host "Downloading Reloaded Tools"
-        Invoke-WebRequest -Uri "https://github.com/Auxy6858/Reloaded-II/releases/latest/download/Tools.zip" -OutFile "$TempDirectory/Tools.zip"
+        Invoke-WebRequest -Uri "https://github.com/Reloaded-Project/Reloaded-II/releases/latest/download/Tools.zip" -OutFile "$TempDirectory/Tools.zip"
         Expand-Archive -LiteralPath "$TempDirectory/Tools.zip" -DestinationPath $reloadedToolsPath
 
         # Remove Items
@@ -344,7 +344,6 @@ function Publish-Common {
 	$arguments = "$(Get-Common-Publish-Args -AllowDeltas $AllowDeltas) --outputfolder `"$Directory`" --publishtarget $PublishTarget"
 	$command = "$reloadedToolPath $arguments"
 	Write-Host "$command`r`n`r`n"
- 	Invoke-Expression "chmod +x $reloadedToolPath"
 	Invoke-Expression $command
 }
 
