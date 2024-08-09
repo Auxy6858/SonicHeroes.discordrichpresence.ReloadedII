@@ -248,7 +248,7 @@ function Get-Tools {
 
     if ($MakeDelta -and -not(Test-Path -Path $updateToolsPath -PathType Any)) {
         Write-Host "Downloading Update Library Tools"
-        Invoke-WebRequest -Uri "https://github.com/Auxy6858/Update/releases/latest/download/Sewer56.Update.Tool.zip" -OutFile "$TempDirectory/Sewer56.Update.Tool.zip"
+        Invoke-WebRequest -Uri "https://github.com/Sewer56/Update/releases/latest/download/Sewer56.Update.Tool.zip" -OutFile "$TempDirectory/Sewer56.Update.Tool.zip"
         Expand-Archive -LiteralPath "$TempDirectory/Sewer56.Update.Tool.zip" -DestinationPath $updateToolsPath
 
         # Remove Items
